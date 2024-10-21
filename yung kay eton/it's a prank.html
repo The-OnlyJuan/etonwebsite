@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton">Click Me</button>
+    <video id="prankVideo" controls style="display:none;">
+        <source src="meow prank.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            const video = document.getElementById('prankVideo');
+            video.style.display = 'block'; // Show the video
+            video.play(); // Start playing the video
+        });
+    </script>
+</body>
+</html>
